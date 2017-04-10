@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Churros!</title>
+</head>
+<body>
+    <div class="container">
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Título</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for (let i = 0; i < lista.length; i++) { %>
+                    <tr>
+                        <td><%= lista[i].id %></td>
+                        <td><%= lista[i].titulo %></td>
+                    </tr>
+                <% } %>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
