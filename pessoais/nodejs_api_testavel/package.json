@@ -8,7 +8,8 @@
     "lint": "eslint '**/*.js' || true",
     "lint:fix": "eslint '**/*.js' --fix || true",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "test-integration": "mocha --opts test/integration/mocha.opts test/integration/*.js || true"
+    "test-integration": "NODE_ENV=test mocha --opts test/integration/mocha.opts test/integration/*.js || true",
+    "test-unit": "NODE_ENV=test mocha --opts test/unit/mocha.opts test/unit/**/*js || true"
   },
   "author": "Lucas Tavares <lucastavaresdarocha@gmail.com>",
   "license": "ISC",
@@ -29,6 +30,7 @@
     "eslint-plugin-jsx-a11y": "^5.0.3",
     "eslint-plugin-react": "^7.0.1",
     "mocha": "^3.4.1",
-    "supertest": "^3.0.0"
+    "supertest": "^3.0.0",
+    "testdouble": "^3.0.0"
   }
 }
