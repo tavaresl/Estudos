@@ -5,11 +5,12 @@
   "main": "index.js",
   "scripts": {
     "start": "babel-node index.js",
+    "test": "npm run lint & npm run test-unit & npm run test-integration & npm run test-contract",
     "lint": "eslint '**/*.js' || true",
     "lint:fix": "eslint '**/*.js' --fix || true",
-    "test": "echo \"Error: no test specified\" && exit 1",
     "test-integration": "NODE_ENV=test mocha --opts test/integration/mocha.opts test/integration/*.js || true",
-    "test-unit": "NODE_ENV=test mocha --opts test/unit/mocha.opts test/unit/**/*js || true"
+    "test-unit": "NODE_ENV=test mocha --opts test/unit/mocha.opts test/unit/**/*js || true",
+    "test-contract": "NODE_ENV=test mocha --opts test/contracts/mocha.opts test/contracts/**/*js || true"
   },
   "author": "Lucas Tavares <lucastavaresdarocha@gmail.com>",
   "license": "ISC",
@@ -29,6 +30,8 @@
     "eslint-plugin-import": "^2.3.0",
     "eslint-plugin-jsx-a11y": "^5.0.3",
     "eslint-plugin-react": "^7.0.1",
+    "joi": "^10.5.2",
+    "joi-assert": "0.0.3",
     "mocha": "^3.4.1",
     "supertest": "^3.0.0",
     "testdouble": "^3.0.0"
