@@ -9,4 +9,6 @@ export default {
       underscored: true,
     },
   },
+  jwtSecret: '5P3cTr0_MvP',
+  jwtSession: { session: false },
 };
